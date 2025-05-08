@@ -8,13 +8,31 @@ const timelineData = [
     company: 'Natural Resources Canada',
     description: 'Developing software solutions as part of a government' ,
     icon: 'work',
+    skills: [
+      'Agile Development',
+      'Software Maintenance',
+      'Troubleshooting',
+      'Team Collaboration',
+    ],
   },
   {
     year: 'Sep 2021 - Apr 2025',
     title: 'Bachelor of Technology (Honours), Business Systems Development',
     company: 'Algonquin College of Applied Arts and Technology',
-    description: 'Graduated with a GPA of 3.75/4. Focused on business systems, data, and technology.',
+    description: `Graduated with a GPA of 3.77/4. Focused on business systems, data, and technology.\n` +
+      `\n` +
+      `Learn more: https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/`,
     icon: 'education',
+    skills: [
+      'Data Analytics & BI',
+      'Advanced SQL',
+      'Software Development (Java, Spring Boot)',
+      'Data Structures & Algorithms',
+      'Database Design',
+      'Enterprise Application Development',
+      'Strategic Business Intelligence',
+      'Project Management & Agile',
+    ],
   },
   {
     year: 'May 2024 - Aug 2024',
@@ -22,6 +40,17 @@ const timelineData = [
     company: 'Canada Revenue Agency',
     description: 'Worked on Data Analytics, Machine Learning, and interactive dashboards.',
     icon: 'work',
+    skills: [
+      'SQL Queries',
+      'Data Pipelines',
+      "CTE's",
+      "Window Functions",
+      'Data Visualization (Power BI)',
+      'Automation (Python, R)',
+      'Data Cleaning (Python, R)',
+      'Large Dataset Analysis (1B+ rows)',
+      'Machine Learning (Regression)',
+    ],
   },
   {
     year: 'May 2023 - Aug 2023',
@@ -29,6 +58,13 @@ const timelineData = [
     company: 'City of Ottawa',
     description: 'Provided IT user support as part of an internship program.',
     icon: 'work',
+    skills: [
+      'User Support',
+      'Active Directory & Azure',
+      'Documentation & Training',
+      'Remote Tool Support',
+      'Knowledge Management',
+    ],
   },
   {
     year: 'May 2022 - Aug 2022',
@@ -36,6 +72,13 @@ const timelineData = [
     company: 'City of Ottawa',
     description: 'Provided IT user support as part of an internship program.',
     icon: 'work',
+    skills: [
+      'User Support',
+      'Active Directory & Azure',
+      'Documentation & Training',
+      'Remote Tool Support',
+      'Knowledge Management',
+    ],
   },
 ];
 
@@ -77,7 +120,32 @@ export default function Timeline() {
                     </span>
                     <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
                     <p className="text-indigo-600 font-medium">{item.company}</p>
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    <p className="text-gray-600 mt-2">
+                      {item.icon === 'education' ? (
+                        <>
+                          Graduated with a GPA of <strong>3.77/4</strong>. Focused on business systems, data, and technology.<br />
+                          <a
+                            href="https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-700 underline"
+                          >
+                            Learn more
+                          </a>
+                        </>
+                      ) : (
+                        item.description
+                      )}
+                    </p>
+                    {item.skills && item.skills.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {item.skills.map((skill, i) => (
+                          <span key={i} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 </div>
                 {/* Icon */}

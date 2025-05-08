@@ -75,9 +75,9 @@ const projectsData: Project[] = [
     image: dash1Img,
   },
   {
-    title: 'Study Group Finder',
+    title: 'Study Group Finder (WebApp + Restful API)',
     description: 'Web app that helps students organize and join study groups.',
-    tech: ['Java', 'Spring Boot', 'MySQL', 'Docker', 'Azure', 'Thymeleaf'],
+    tech: ['Java', 'Spring Boot', 'MySQL', 'Docker', 'Azure', 'Thymeleaf', 'CRUD', 'RestFul APIs'],
     github: 'https://github.com/cblankenback/study.group.finder',
     details: [
       'Problem: Students struggled to find and organize study partners.',
@@ -88,9 +88,9 @@ const projectsData: Project[] = [
     image: studygroupImg,
   },
   {
-    title: 'Employee Task Manager (Android + API)',
+    title: 'Employee Task Manager (Android + Restful API)',
     description: 'Android app and RESTful backend to manage employee tasks.',
-    tech: ['Java', 'Spring Boot', 'Android', 'Spring Security', 'GitHub'],
+    tech: ['Java', 'Spring Boot', 'Android', 'Spring Security', 'GitHub', 'CRUD', 'RestFul APIs'],
     github: 'https://github.com/cblankenback/TaskManager',
     details: [
       'Problem: Wanted to make a secure, mobile-friendly task management system.',

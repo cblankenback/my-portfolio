@@ -14,7 +14,7 @@ const skills = [
     category: 'Software Development',
     icon: Code,
     skills: [
-      'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'React', 'HTML', 'CSS', 'Spring Boot', 'Spring Security', 'Node.js', 'Git', 'GitHub', 'Docker', 'Maven', 'Gradle', 'Postman', 'Cursor (AI coding)'
+      'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'React', 'HTML', 'CSS', 'Spring Boot', 'Spring Security', 'Node.js', 'Git', 'GitHub', 'Docker', 'Maven', 'Gradle', 'Postman', 'Cursor (AI coding)', 'CRUD', 'RestFul APIs'
     ],
   },
   {
@@ -35,7 +35,7 @@ const skills = [
     category: 'Databases',
     icon: Database,
     skills: [
-      'MySQL', 'SQL Server', 'Database Design', 'Advanced SQL', 'Database Queries', 'Teradata', 'MongoDB', 'Oracle', 'BigQuery'
+      'MySQL', 'SQL Server', 'Database Design', 'Advanced SQL', 'Database Queries', 'BigQuery', "CTE's", 'Billion row Datasets'
     ],
   },
   {
@@ -49,7 +49,7 @@ const skills = [
     category: 'Machine Learning & AI',
     icon: Wand2,
     skills: [
-      'Random Forest', 'Classification Models', 'Predictive Analytics', 'Supervised/Unsupervised Learning', 'Deep Learning', 'TensorFlow', 'PyTorch', 'MediaPipe', 'Groq AI', 'OpenAI', 'Prompt Engineering', 'MLOps'
+      'Random Forest', 'Classification Models', 'Predictive Analytics', 'Supervised/Unsupervised Learning', 'Deep Learning', 'TensorFlow', 'PyTorch', 'MediaPipe', 'Gen AI', 'OpenAI', 'Prompt Engineering', 'MLOps', 'Cursor (AI coding)'
     ],
   },
   {

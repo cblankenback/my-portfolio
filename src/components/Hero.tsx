@@ -40,7 +40,7 @@ export default function Hero() {
           <span className="block text-blue-200 text-2xl mt-4">Empowering Decisions with Machine Learning & AI</span>
         </h1>
         <p className="text-xl md:text-2xl mt-4 text-blue-100">
-          Data Analyst&nbsp;| AI Enthusiast&nbsp;| Problem Solver
+          Data Analyst&nbsp;| AI Enthusiast&nbsp;| Software Developer&nbsp;| Problem Solver
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
