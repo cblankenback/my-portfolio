@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, X, CheckCircle } from 'lucide-react';
+import { Github, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import hackathonImg from "../assets/hackathon.png";
 import ossoImg from "../assets/osso.png";
