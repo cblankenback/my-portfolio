@@ -27,7 +27,7 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex items-center space-x-4 ml-4">
-            <a href="https://github.com/cblankenback?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+            <a href="https://github.com/cblankenback" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
               <Github className="w-5 h-5" />
             </a>
             <a href="https://www.linkedin.com/in/christianblankenback" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
@@ -60,7 +60,7 @@ export default function Navbar() {
             </a>
           ))}
           <div className="flex space-x-4 py-2">
-            <a href="https://github.com/cblankenback?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
+            <a href="https://github.com/cblankenback" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
               <Github className="w-5 h-5" />
             </a>
             <a href="https://www.linkedin.com/in/christianblankenback" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
