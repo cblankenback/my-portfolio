@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+
+@keyframes blob {
+  0%,100% {
+    transform: translate(-20%, -30%) scale(1);
+    border-radius: 42% 58% 55% 45%/45% 38% 62% 55%;
+  }
+  33% {
+    transform: translate(30%, -20%) scale(1.1);
+    border-radius: 35% 65% 46% 54%/52% 40% 60% 48%;
+  }
+  66% {
+    transform: translate(-10%, 25%) scale(0.9);
+    border-radius: 58% 42% 50% 50%/40% 60% 40% 60%;
+  }
+}
+
+@keyframes blob2 {
+  0%,100% {
+    transform: translate(20%, 10%) scale(1.05);
+    border-radius: 60% 40% 55% 45%/45% 60% 40% 55%;
+  }
+  33% {
+    transform: translate(-25%, 15%) scale(0.95);
+    border-radius: 50% 50% 60% 40%/60% 40% 60% 40%;
+  }
+  66% {
+    transform: translate(10%, -20%) scale(1.1);
+    border-radius: 40% 60% 45% 55%/55% 45% 55% 45%;
+  }
+}
+
+@keyframes blob3 {
+  0%,100% {
+    transform: translate(-10%, 20%) scale(0.98);
+    border-radius: 55% 45% 60% 40%/40% 60% 50% 50%;
+  }
+  33% {
+    transform: translate(15%, -25%) scale(1.08);
+    border-radius: 45% 55% 50% 50%/50% 50% 45% 55%;
+  }
+  66% {
+    transform: translate(25%, 10%) scale(1.02);
+    border-radius: 60% 40% 55% 45%/45% 60% 40% 55%;
+  }
+}
+body { margin: 0; }
+.animate-blob {
+  animation: blob 18s ease-in-out infinite;
+}
+.animate-blob2 {
+  animation: blob2 18s ease-in-out infinite;
+}
+.animate-blob3 {
+  animation: blob3 18s ease-in-out infinite;
+}
