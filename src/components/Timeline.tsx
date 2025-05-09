@@ -17,7 +17,7 @@ const timelineData = [
     ],
   },
   {
-    year: 'Sep 2021 - Apr 2025',
+    year: 'Sep 2021 - Present',
     title: 'Bachelor of Technology (Honours), Business Systems Development',
     company: 'Algonquin College of Applied Arts and Technology',
     description: `Graduated with a GPA of 3.77/4. Focused on business systems, data, and technology.\n` +
@@ -132,7 +132,7 @@ export default function Timeline() {
                     <p className="text-gray-600 mt-2">
                       {item.icon === 'education' ? (
                         <>
-                          Graduated with a GPA of <strong>3.77/4</strong>. Focused on business systems,
+                          Graduating with a GPA of <strong>3.77/4</strong>. Focused on business systems,
                           data, and technology.
                           <br />
                           <a
