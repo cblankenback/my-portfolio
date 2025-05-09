@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
 
 const navLinks = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About Me', href: '#about' },
+  { name: 'View My Work', href: '#projects' },
+  { name: 'Contact Me', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -17,7 +15,7 @@ export default function Navbar() {
       <div className="w-full flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
         <a href="#hero" className="text-2xl font-bold text-gray-900">Christian's Portfolio</a>
         <div className="hidden md:flex items-center space-x-8">
-          {navLinks.slice(1).map(link => (
+          {navLinks.map(link => (
             <a
               key={link.name}
               href={link.href}
@@ -49,7 +47,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white shadow px-4 pb-4 pt-2">
-          {navLinks.slice(1).map(link => (
+          {navLinks.map(link => (
             <a
               key={link.name}
               href={link.href}

@@ -121,7 +121,7 @@ const Contact = () => {
             Send me an Email
           </a>
           <a
-            href="https://www.linkedin.com/in/christian-blankenback/"
+            href="https://www.linkedin.com/in/christianblankenback/"
             className="flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 font-semibold shadow transition"
             target="_blank"
             rel="noopener noreferrer"

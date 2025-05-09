@@ -48,7 +48,7 @@ const projectsData: Project[] = [
   {
     title: 'OSSO Automation Project',
     description: 'Script to automate manual data entry for a local organization, saving ~16 hours/month.',
-    tech: ['Python', 'Pandas', 'Excel Automation'],
+    tech: ['Python', 'Pandas', 'Excel Automation', 'Power Automate'],
     details: [
       'Problem: Manual Excel data entry into accounting software took 2 days/month and required thousands of repetitive clicks.',
       'Solution: Automated the process with a Python script using Pandas.',
@@ -272,7 +272,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -280,8 +280,8 @@ export default function Projects() {
         >
           Projects
         </motion.h2>
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={{
             hidden: { opacity: 0 },
             show: {
@@ -334,7 +334,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-black text-white font-semibold shadow hover:bg-gray-900 transition"
+                      className="inline-flex items-center gap-2 px-3 py-2 whitespace-nowrap rounded-lg bg-black text-white font-semibold shadow hover:bg-gray-900 transition"
                     >
                       <Github className="w-5 h-5" />
                       Code
@@ -345,7 +345,7 @@ export default function Projects() {
                       href={project.video}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+                      className="inline-flex items-center gap-2 px-3 py-2 whitespace-nowrap rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-3A2.25 2.25 0 008.25 5.25V9m7.5 0v10.5A2.25 2.25 0 0113.5 21h-3a2.25 2.25 0 01-2.25-2.25V9m7.5 0h.75A2.25 2.25 0 0121 11.25v1.5A2.25 2.25 0 0118.75 15H17.5m-11-6h-.75A2.25 2.25 0 003 11.25v1.5A2.25 2.25 0 005.25 15H6.5m0-6V5.25A2.25 2.25 0 018.75 3h6.5A2.25 2.25 0 0117.5 5.25V9" /></svg>
                       Submission & Video

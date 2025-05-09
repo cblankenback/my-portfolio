@@ -1,12 +1,13 @@
 import { Briefcase, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
 const timelineData = [
   {
     year: 'May 2025 - Present',
     title: 'Software Developer (Co-op)',
     company: 'Natural Resources Canada',
-    description: 'Developing software solutions as part of a government' ,
+    description: 'Developing software solutions as part of a government',
     icon: 'work',
     skills: [
       'Agile Development',
@@ -56,7 +57,7 @@ const timelineData = [
     year: 'May 2023 - Aug 2023',
     title: 'Info Tech User Support Assistant (Internship)',
     company: 'City of Ottawa',
-    description: 'Provided IT user support as part of an internship program.',
+    description: 'Provided IT user support, created training videos, managed user account permissions, and more as part of an internship program.',
     icon: 'work',
     skills: [
       'User Support',
@@ -74,8 +75,7 @@ const timelineData = [
     icon: 'work',
     skills: [
       'User Support',
-      'Active Directory & Azure',
-      'Documentation & Training',
+      'Documentation',
       'Remote Tool Support',
       'Knowledge Management',
     ],
@@ -86,7 +86,7 @@ export default function Timeline() {
   return (
     <section id="timeline" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,9 +94,11 @@ export default function Timeline() {
         >
           Experience & Education
         </motion.h2>
+
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200" />
+          {/* centre line only on desktop */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gray-200" />
+
           <div className="space-y-12">
             {timelineData.map((item, index) => (
               <motion.div
@@ -105,25 +107,34 @@ export default function Timeline() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                className={`
+                  flex flex-col items-center
+                  md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+                `}
               >
-                {/* Content */}
-                <div className="w-1/2 pr-8 pl-8">
+                {/* content */}
+                <div className="w-full md:w-1/2 px-8">
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className={`bg-white p-6 rounded-lg shadow-md ${
-                      index % 2 === 0 ? 'text-right' : 'text-left'
-                    }`}
+                    className={`
+                      bg-white p-6 rounded-lg shadow-md
+                      text-center
+                      ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}
+                    `}
                   >
                     <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium mb-2">
                       {item.year}
                     </span>
+
                     <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
                     <p className="text-indigo-600 font-medium">{item.company}</p>
+
                     <p className="text-gray-600 mt-2">
                       {item.icon === 'education' ? (
                         <>
-                          Graduated with a GPA of <strong>3.77/4</strong>. Focused on business systems, data, and technology.<br />
+                          Graduated with a GPA of <strong>3.77/4</strong>. Focused on business systems,
+                          data, and technology.
+                          <br />
                           <a
                             href="https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/"
                             target="_blank"
@@ -137,10 +148,14 @@ export default function Timeline() {
                         item.description
                       )}
                     </p>
-                    {item.skills && item.skills.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-3">
+
+                    {item.skills?.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3 justify-center md:justify-start">
                         {item.skills.map((skill, i) => (
-                          <span key={i} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium">
+                          <span
+                            key={i}
+                            className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-xs font-medium"
+                          >
                             {skill}
                           </span>
                         ))}
@@ -148,11 +163,12 @@ export default function Timeline() {
                     )}
                   </motion.div>
                 </div>
-                {/* Icon */}
+
+                {/* icon */}
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center z-10"
+                  className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center z-10 my-4 md:my-0"
                 >
                   {item.icon === 'work' ? (
                     <Briefcase className="w-6 h-6 text-white" />
@@ -160,8 +176,9 @@ export default function Timeline() {
                     <GraduationCap className="w-6 h-6 text-white" />
                   )}
                 </motion.div>
-                {/* Empty space for the other side */}
-                <div className="w-1/2" />
+
+                {/* placeholder for opposite side (desktop only) */}
+                <div className="hidden md:block md:w-1/2" />
               </motion.div>
             ))}
           </div>
@@ -169,4 +186,4 @@ export default function Timeline() {
       </div>
     </section>
   );
-} 
+}
