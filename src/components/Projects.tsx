@@ -253,7 +253,7 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   href={project.video}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-orange-500 text-white font-semibold shadow hover:bg-orange-600 transition"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-3A2.25 2.25 0 008.25 5.25V9m7.5 0v10.5A2.25 2.25 0 0113.5 21h-3a2.25 2.25 0 01-2.25-2.25V9m7.5 0h.75A2.25 2.25 0 0121 11.25v1.5A2.25 2.25 0 0118.75 15H17.5m-11-6h-.75A2.25 2.25 0 003 11.25v1.5A2.25 2.25 0 005.25 15H6.5m0-6V5.25A2.25 2.25 0 018.75 3h6.5A2.25 2.25 0 0117.5 5.25V9" /></svg>
                   Submission & Video
@@ -345,7 +345,7 @@ export default function Projects() {
                       href={project.video}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-3 py-2 whitespace-nowrap rounded-lg bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+                      className="inline-flex items-center gap-2 px-3 py-2 whitespace-nowrap rounded-lg bg-orange-500 text-white font-semibold shadow hover:bg-orange-600 transition"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-3A2.25 2.25 0 008.25 5.25V9m7.5 0v10.5A2.25 2.25 0 0113.5 21h-3a2.25 2.25 0 01-2.25-2.25V9m7.5 0h.75A2.25 2.25 0 0121 11.25v1.5A2.25 2.25 0 0118.75 15H17.5m-11-6h-.75A2.25 2.25 0 003 11.25v1.5A2.25 2.25 0 005.25 15H6.5m0-6V5.25A2.25 2.25 0 018.75 3h6.5A2.25 2.25 0 0117.5 5.25V9" /></svg>
                       Submission & Video
