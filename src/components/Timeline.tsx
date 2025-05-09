@@ -7,7 +7,7 @@ const timelineData = [
     year: 'May 2025 - Present',
     title: 'Software Developer (Co-op)',
     company: 'Natural Resources Canada',
-    description: 'Developing software solutions as part of a government',
+    description: 'Developing software solutions as part of a government Co-Op program.',
     icon: 'work',
     skills: [
       'Agile Development',
