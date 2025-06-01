@@ -14,7 +14,7 @@ const skills = [
     category: 'Software Development',
     icon: Code,
     skills: [
-      'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'React', 'HTML', 'CSS', 'Spring Boot', 'Spring Security', 'Node.js', 'Git', 'GitHub', 'Docker', 'Maven', 'Gradle', 'Postman', 'Cursor (AI coding)', 'CRUD', 'RestFul APIs'
+      'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'React', 'HTML', 'CSS', 'Spring Boot', 'Spring Security', 'Node.js', 'Git', 'GitHub', 'Docker', 'Maven', 'Gradle', 'Postman', 'Cursor (AI coding)', 'CRUD', 'RestFul APIs', 'Power Pages', 'Power Automate', 'Power Apps', 'Dynamics 365'
     ],
   },
   {
@@ -25,10 +25,17 @@ const skills = [
     ],
   },
   {
+    category: 'Data Engineering',
+    icon: Database,
+    skills: [
+      'Azure Data Lake', 'Azure Data Factory', 'Azure Databricks', 'Azure Synapse', 'Azure Key Vault', 'ETL/ELT', 'Data Warehousing', 'Data Modeling', 'Data Governance', 'Data Security', 'Data Quality', 'PySpark', 'Data Pipeline Design'
+    ],
+  },
+  {
     category: 'Cloud & DevOps',
     icon: Cloud,
     skills: [
-      'Azure','Github', 'Git', 'AWS', 'CI/CD', 'Agile (Scrum)', 'Power Automate'
+      'Azure','Azure DevOps', 'Github', 'Git', 'AWS', 'CI/CD', 'Agile (Scrum)', 'Power Automate'
     ],
   },
   {
@@ -56,7 +63,7 @@ const skills = [
     category: 'Professional Skills',
     icon: Users,
     skills: [
-      'Teamwork', 'Communication', 'Problem Solving', 'Object-Oriented Design', 'Authentication & Authorization', 'Unit Testing', 'Project Management', 'Stakeholder Management'
+      'Teamwork', 'Communication', 'Problem Solving', 'Object-Oriented Design', 'Authentication & Authorization', 'Unit Testing', 'QA', 'UAT', 'Project Management', 'Stakeholder Management', 'Technical Documentation', 'User Story Refinement'
     ],
   },
 ];

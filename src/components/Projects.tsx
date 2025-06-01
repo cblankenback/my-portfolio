@@ -9,6 +9,7 @@ import hackathonMeImg from "../assets/hackathonme.jpeg";
 import androidImg from "../assets/android.png";
 import amazonImg from "../assets/amazon.png";
 import portfolioImg from "../assets/profolio.png";
+import azureDataImg from "../assets/azuredata.png";
 
 // TypeScript type for a project
 interface Project {
@@ -44,6 +45,35 @@ const projectsData: Project[] = [
     ],
     image: hackathonMeImg,
     modalImage: hackathonImg,
+  },
+  {
+    title: 'Azure Data Engineering Project on COVID-19 Dataset',
+    description: 'End-to-end cloud ETL and analytics for COVID-19 data.',
+    tech: ['Azure Data Lake', 'Azure Key Vault', 'Python', "PySpark", 'Azure Data Factory', 'Azure Databricks', 'Azure Synapse', 'Power BI'],
+    github: 'https://github.com/cblankenback/covid19-canada-azure-pipeline',
+    details: [
+      'Problem: End-to-end cloud ETL and analytics for COVID-19 data.',
+      'Solution: Built a scalable data pipeline using Azure services.',
+      'Key Features:',
+        'Data Sources (15k+ rows):',
+        '  - COVID-19 death data set (Health Canada)',
+        '  - COVID-19 vaccine data set (Health Canada)',
+        '  - Population data set (Statistics Canada)',
+        'Azure Data Lake Gen2: Raw-data landing zone and transformed-data zone.',
+        'Azure Data Factory:',
+          '  - Ingest raw CSV/JSON into Data Lake',
+          '  - Trigger Databricks notebooks for cleaning & transformation',
+        'Databricks (PySpark):',
+          '  - Clean nulls/blanks and cast types',
+          '  - Build snow flake schema: dim_date, dim_province, dim_population, fact_covid, fact_vaccination',
+          '  - Write transformed CSV back to Data Lake',
+        'Azure Synapse/SQL: Ingest transformed CSV into relational tables.',
+        'Power BI Dashboard:',
+          '  - Connect to Azure SQL tables',
+          '  - KPI cards, time series charts, filled map by province, and % metrics',
+      'Impact: Demonstrates scalable, maintainable cloud ETL and analytics for real-world data.'
+    ],
+    image: azureDataImg,
   },
   {
     title: 'OSSO Automation Project',
@@ -131,6 +161,7 @@ const projectsData: Project[] = [
     ],
     image: portfolioImg,
   },
+ 
 ];
 
 function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
@@ -150,14 +181,15 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     for (let i = startIdx + 1; i < project.details.length; i++) {
       const line = project.details[i];
       // Stop if we hit another section
-      if (/^(problem|solution|impact):/i.test(line)) break;
-      features.push(line.replace(/^[-•\s]+/, '').trim());
+      if (/^(problem|solution|impact):/i.test(line.trim())) break; // Check trimmed line for section start
+      features.push(line); // Keep the raw line with indentation
     }
     // If no lines after, try to split the Key Features line itself
     if (features.length === 0) {
       const keyLine = project.details[startIdx];
-      const split = keyLine.split(':')[1]?.split(/,|\n/).map(f => f.trim()).filter(Boolean) || [];
-      return split;
+      const split = keyLine.split(':')[1]?.split(/\n/).map(f => f.trim()).filter(Boolean) || []; // Split only by newline here if needed
+      // Decide if we need to process these split lines further for indentation
+      return split; // Or process split lines to add back assumed indentation?
     }
     return features;
   };
@@ -222,9 +254,11 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               {keyFeatures.length > 0 && (
                 <div>
                   <h4 className="font-bold text-base mb-1">Key Features</h4>
-                  <ul className="list-disc pl-5 space-y-1">
+                  <ul className="list-none pl-0 space-y-1">
                     {keyFeatures.map((feature, i) => (
-                      <li key={i} className="text-gray-900">{feature}</li>
+                      <li key={i} className={`text-gray-900 ${feature.startsWith('  - ') ? 'pl-4' : ''}`}>
+                        {feature.startsWith('  - ') ? <span className="inline-block mr-2">•</span> : ''}{feature.replace(/^\s*-?\s*/, '').trim()}
+                      </li>
                     ))}
                   </ul>
                 </div>

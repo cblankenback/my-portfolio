@@ -7,13 +7,32 @@ const timelineData = [
     year: 'May 2025 - Present',
     title: 'Software Developer (Co-op)',
     company: 'Natural Resources Canada',
-    description: 'Developing software solutions as part of a government Co-Op program.',
+    description: [
+      'Developing full-stack public-facing web pages using Power Pages for the front end and Power Automate / Dynamics 365 for backend workflows and data integration.',
+      'Creating internal tools and documentation to extract data from CRM apps and build Power BI dashboards for reporting.',
+      'Collaborating in Agile Scrum sprints, using Azure DevOps to manage user stories, tasks, and release planning.',
+      'Customizing user interfaces and business logic using Power Apps, improving usability for internal staff.',
+      'Writing and refining user stories and requirements in Azure DevOps to support agile sprints.',
+      'Participating in unit testing and QA, ensuring feature quality and system reliability.',
+      'Logging and resolving UAT issues, working with developers to implement fixes.',
+      'Maintaining and updating technical documentation and user guides.',
+    ],
     icon: 'work',
     skills: [
-      'Agile Development',
-      'Software Maintenance',
-      'Troubleshooting',
-      'Team Collaboration',
+      'Agile Methodologies',
+      'Microsoft Power Apps',
+      'Microsoft Power Automate',
+      'Power Pages',
+      'Dynamics 365',
+      'Microsoft Power BI',
+      'Azure DevOps Services',
+      'SQL',
+      'User Story Development',
+      'Unit Testing',
+      'Quality Assurance (QA)',
+      'User Acceptance Testing (UAT)',
+      'Technical Writing',
+      'JavaScript',
     ],
   },
   {
@@ -39,45 +58,67 @@ const timelineData = [
     year: 'May 2024 - Aug 2024',
     title: 'Data Analyst / Jr. Quantitative Analyst (Co-op)',
     company: 'Canada Revenue Agency',
-    description: 'Worked on Data Analytics, Machine Learning, and interactive dashboards.',
+    description: [
+      'Created a data pipeline and automation script to import and clean third-party vendor data into SQL databases, enabling daily processing of 5K+ records that couldn\'t be handled manually.',
+      'Developed SQL queries and designed Power BI dashboards to visualize data sets of 100M+ rows.',
+      'Built 2 reusable Python and R scripts that remain in active use by the team.',
+      'Found inconsistencies affecting ~15% of records in large datasets and suggested fixes which were then implemented.',
+    ],
     icon: 'work',
     skills: [
-      'SQL Queries',
+      'SQL',
+      'Power BI',
+      'Python',
+      'R',
       'Data Pipelines',
-      "CTE's",
-      "Window Functions",
-      'Data Visualization (Power BI)',
-      'Automation (Python, R)',
-      'Data Cleaning (Python, R)',
-      'Large Dataset Analysis (1B+ rows)',
-      'Machine Learning (Regression)',
+      'Data Cleaning',
+      'Large Dataset Analysis',
+      'Machine Learning',
+      'Business Intelligence',
+      'Agile Methodologies',
+      'Pandas',
+      'Jupyter',
+      'SAS Viya',
     ],
   },
   {
     year: 'May 2023 - Aug 2023',
     title: 'Info Tech User Support Assistant (Internship)',
     company: 'City of Ottawa',
-    description: 'Provided IT user support, created training videos, managed user account permissions, and more as part of an internship program.',
+    description: [
+      'Created training documents and videos for future new hires onboarding.',
+      'Provided technical assistance and support to customers via phone, email, and online chat.',
+      'Troubleshoot and resolve technical issues, answered employee questions, and provided training and guidance as needed.',
+      'Documented customer interactions and technical issues in a fast-paced, deadline-driven environment.',
+    ],
     icon: 'work',
     skills: [
       'User Support',
-      'Active Directory & Azure',
-      'Documentation & Training',
-      'Remote Tool Support',
-      'Knowledge Management',
+      'Troubleshooting',
+      'Documentation',
+      'Communication',
+      'Time Management',
+      'Self-Motivation',
+      'Remote Tools',
+      'Project Management',
     ],
   },
   {
     year: 'May 2022 - Aug 2022',
     title: 'Info Tech User Support Assistant (Internship)',
     company: 'City of Ottawa',
-    description: 'Provided IT user support as part of an internship program.',
+    description: [
+      'Worked in a team of 10-15 professionals whose mandate was to provide innovative and strategic technology solutions to City of Ottawa employees.',
+      'Responsible for providing technical assistance and support to customers via phone, email, and online chat. Duties included troubleshooting and resolving technical issues, answering employee questions, and providing training and guidance as needed.',
+      'Documented customer interactions and technical issues in a detailed/accurate manner in a fast-paced, deadline-driven environment.',
+    ],
     icon: 'work',
     skills: [
       'User Support',
+      'Teamwork',
+      'Troubleshooting',
       'Documentation',
-      'Remote Tool Support',
-      'Knowledge Management',
+      'Communication',
     ],
   },
 ];
@@ -129,7 +170,7 @@ export default function Timeline() {
                     <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
                     <p className="text-indigo-600 font-medium">{item.company}</p>
 
-                    <p className="text-gray-600 mt-2">
+                    <p className="text-gray-600 mt-2 text-left">
                       {item.icon === 'education' ? (
                         <>
                           Graduating with a GPA of <strong>3.77/4</strong>. Focused on business systems,
@@ -144,9 +185,15 @@ export default function Timeline() {
                             Learn more
                           </a>
                         </>
+                      ) : (Array.isArray(item.description) ? (
+                        <ul className="list-disc list-inside space-y-1 text-left">
+                          {item.description.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
                       ) : (
                         item.description
-                      )}
+                      ))}
                     </p>
 
                     {item.skills?.length > 0 && (
