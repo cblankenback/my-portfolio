@@ -37,15 +37,15 @@ export default function About() {
           {/* Bio Section */}
           <motion.div className="md:col-span-2 flex flex-col justify-between space-y-6" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
             <motion.p className="text-lg text-gray-700" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.5 }} viewport={{ once: true }}>
-              Hello there, my name is <strong>Christian Blankenback</strong>. I am in my final year of a 4-year 
-              <a href="https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/" 
+              Hello there, my name is <strong>Christian Blankenback</strong>. I am a <strong>Data Engineer at Transport Canada</strong>, based in Ottawa, Canada. I hold a
+              <a href="https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/"
                  target="_blank" rel="noopener noreferrer" className="text-blue-700 underline ml-1">
                 Bachelor of Technology in Business Systems Development
               </a>{' '}
-              from Algonquin College (GPA: <strong>3.77/4</strong>, Dean’s Honour List), based in Ottawa, Canada.<br/><br/>
-              I am passionate about data and technology, and I am currently seeking opportunities in <strong>data science</strong>, <strong>data analytics</strong> and <strong>software engineering</strong>.<br/><br/>
-              I am a lifelong learner, always exploring new tools and techniques in the world of software, data, machine learning, and AI. My portfolio showcases the practical knowledge and skills I have gained through my academic journey and personal projects.<br/><br/>
-              
+              from Algonquin College (GPA: <strong>3.77/4</strong>, Dean's Honour List).<br/><br/>
+              I am passionate about data and technology, with experience in <strong>data engineering</strong>, <strong>data analytics</strong>, and <strong>software development</strong>.<br/><br/>
+              I am a lifelong learner, always exploring new tools and techniques in the world of software, data, machine learning, and AI. My portfolio showcases the practical knowledge and skills I have gained through my career and personal projects.<br/><br/>
+
             </motion.p>
 
             {/* Experience & LinkedIn Stats */}
@@ -57,8 +57,8 @@ export default function About() {
               viewport={{ once: true }}
             >
               <div className="p-4 bg-gray-50 rounded-lg">
-                <h3 className="font-bold text-xl text-gray-900">2025</h3>
-                <p className="text-gray-600">Graduating</p>
+                <h3 className="font-bold text-xl text-gray-900">3.77/4</h3>
+                <p className="text-gray-600">GPA</p>
               </div>
               <div className="p-4 bg-gray-50 rounded-lg">
                 <h3 className="font-bold text-xl text-gray-900">Ottawa</h3>

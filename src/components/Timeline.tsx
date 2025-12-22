@@ -4,18 +4,51 @@ import { motion } from 'framer-motion';
 
 const timelineData = [
   {
-    year: 'May 2025 - Present',
+    year: 'Sep 2025 - Present',
+    title: 'Data Engineer',
+    company: 'Transport Canada',
+    description: [
+      'Migrating legacy Oracle pipelines to Azure Databricks for rail safety data, achieving 15x performance improvement (reduced runtime from 30 minutes to 2 minutes).',
+      'Building 30+ reference and transaction tables (5M+ rows) using PySpark, Delta Lake, and medallion architecture with bronze/silver/gold layers.',
+      'Built automated data quality testing framework to validate null values and referential integrity, preventing errors from reaching production dashboards.',
+      'Creating comprehensive documentation for migrated pipelines and replacing static mapping tables with dynamic transformations, eliminating monthly manual maintenance.',
+      'Managing Unity Catalog permissions (5+ schemas) and collaborating in Agile sprints using Azure DevOps for Git version control, pull requests, code reviews, and bi-weekly sprint planning.',
+    ],
+    icon: 'work',
+    skills: [
+      'Azure Databricks',
+      'PySpark',
+      'Delta Lake',
+      'Unity Catalog',
+      'Data Pipelines',
+      'Data Engineering',
+      'Python (Programming Language)',
+      'Oracle',
+      'SQL',
+      'Data Quality',
+      'Azure DevOps Services',
+      'Git',
+      'Medallion Architecture',
+      'ETL (Extract, Transform, Load)',
+      'Pipeline Migration',
+      'Agile Methodologies',
+    ],
+  },
+  {
+    year: 'May - Sep 2025',
     title: 'Software Developer (Co-op)',
     company: 'Natural Resources Canada',
     description: [
-      'Developing full-stack public-facing web pages using Power Pages for the front end and Power Automate / Dynamics 365 for backend workflows and data integration.',
-      'Creating internal tools and documentation to extract data from CRM apps and build Power BI dashboards for reporting.',
-      'Collaborating in Agile Scrum sprints, using Azure DevOps to manage user stories, tasks, and release planning.',
-      'Customizing user interfaces and business logic using Power Apps, improving usability for internal staff.',
-      'Writing and refining user stories and requirements in Azure DevOps to support agile sprints.',
-      'Participating in unit testing and QA, ensuring feature quality and system reliability.',
-      'Logging and resolving UAT issues, working with developers to implement fixes.',
-      'Maintaining and updating technical documentation and user guides.',
+      'Helped develop 3 full-stack public-facing web applications using Power Pages for front-end interfaces and Power Automate/Dynamics 365 for backend CRM workflows',
+      'Built auto-save functionality using REST APIs to prevent data loss on lengthy government forms, automatically saving user progress after typing inactivity',
+      'Assisted in creating internal tools and documentation to extract CRM data for reporting purposes',
+      'Participated in Agile Scrums over 4 months, contributing to user story management and task tracking through Azure DevOps',
+      'Customized user interfaces and business logic using Power Apps / Power Automate to improve usability for government staff',
+      'Contributed to writing user stories and technical requirements in Azure DevOps to support sprint development',
+      'Performed comprehensive regression testing across multiple applications to ensure system reliability',
+      'Researched Playwright implementation for automated testing and created documentation and demo for potential team adoption',
+      'Supported UAT issue resolution by collaborating with senior developers to identify and implement fixes',
+      'Documented technical procedures including Playwright setup guides and auto-save implementation steps',
     ],
     icon: 'work',
     skills: [
@@ -33,25 +66,6 @@ const timelineData = [
       'User Acceptance Testing (UAT)',
       'Technical Writing',
       'JavaScript',
-    ],
-  },
-  {
-    year: 'Sep 2021 - Present',
-    title: 'Bachelor of Technology (Honours), Business Systems Development',
-    company: 'Algonquin College of Applied Arts and Technology',
-    description: `Graduated with a GPA of 3.77/4. Focused on business systems, data, and technology.\n` +
-      `\n` +
-      `Learn more: https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/`,
-    icon: 'education',
-    skills: [
-      'Data Analytics & BI',
-      'Advanced SQL',
-      'Software Development (Java, Spring Boot)',
-      'Data Structures & Algorithms',
-      'Database Design',
-      'Enterprise Application Development',
-      'Strategic Business Intelligence',
-      'Project Management & Agile',
     ],
   },
   {
@@ -79,6 +93,25 @@ const timelineData = [
       'Pandas',
       'Jupyter',
       'SAS Viya',
+    ],
+  },
+  {
+    year: 'Sep 2021 - Dec 2025',
+    title: 'Bachelor of Technology (Honours), Business Systems Development',
+    company: 'Algonquin College of Applied Arts and Technology',
+    description: `GPA of 3.77/4. Focused on business systems, data, and technology.\n` +
+      `\n` +
+      `Learn more: https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/`,
+    icon: 'education',
+    skills: [
+      'Data Analytics & BI',
+      'Advanced SQL',
+      'Software Development (Java, Spring Boot)',
+      'Data Structures & Algorithms',
+      'Database Design',
+      'Enterprise Application Development',
+      'Strategic Business Intelligence',
+      'Project Management & Agile',
     ],
   },
   {
@@ -173,7 +206,7 @@ export default function Timeline() {
                     <p className="text-gray-600 mt-2 text-left">
                       {item.icon === 'education' ? (
                         <>
-                          Graduating with a GPA of <strong>3.77/4</strong>. Focused on business systems,
+                          GPA of <strong>3.77/4</strong>. Focused on business systems,
                           data, and technology.
                           <br />
                           <a
