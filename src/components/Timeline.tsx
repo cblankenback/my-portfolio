@@ -4,7 +4,32 @@ import { motion } from 'framer-motion';
 
 const timelineData = [
   {
-    year: 'Sep 2025 - Present',
+    year: 'Feb 2026 - Present',
+    title: 'Data Engineer',
+    company: 'Bank of Canada',
+    description: [
+      'Ingesting Cannex time series financial data via REST API into Azure Databricks weekly, transforming through raw/standardized/curated layers for downstream analytics.',
+      'Processing Dow Jones news data (5 searches, up to 26 shards of up to 8GB each, ingested weekly) through Databricks pipelines to support AI-driven communications analysis for Bank of Canada public statements.',
+      'Managing Unity Catalog permissions across schemas, enforcing access controls for sensitive financial datasets.',
+      'Won 2nd place in internal AI hackathon (team of 5). Built a real-time Reddit sentiment analysis dashboard using HTMX and generative AI for financial signal monitoring.',
+      'Working in Agile sprints using Azure DevOps for CI/CD, Git version control, and pull request workflows.',
+    ],
+    icon: 'work',
+    skills: [
+      'Azure Databricks',
+      'REST API',
+      'Data Pipelines',
+      'Unity Catalog',
+      'HTMX',
+      'Generative AI',
+      'Sentiment Analysis',
+      'Azure DevOps',
+      'Git',
+      'Agile Methodologies',
+    ],
+  },
+  {
+    year: 'Sep 2025 - Feb 2026',
     title: 'Data Engineer',
     company: 'Transport Canada',
     description: [

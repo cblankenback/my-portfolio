@@ -37,7 +37,7 @@ export default function About() {
           {/* Bio Section */}
           <motion.div className="md:col-span-2 flex flex-col justify-between space-y-6" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} viewport={{ once: true }}>
             <motion.p className="text-lg text-gray-700" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.5 }} viewport={{ once: true }}>
-              Hello there, my name is <strong>Christian Blankenback</strong>. I am a <strong>Data Engineer at Transport Canada</strong>, based in Ottawa, Canada. I hold a
+              Hello there, my name is <strong>Christian Blankenback</strong>. I am a <strong>Data Engineer at Bank of Canada</strong>, based in Ottawa, Canada. I hold a
               <a href="https://www.algonquincollege.com/sat/program/bachelor-of-technology-in-business-systems-development/"
                  target="_blank" rel="noopener noreferrer" className="text-blue-700 underline ml-1">
                 Bachelor of Technology in Business Systems Development
